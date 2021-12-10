@@ -1,0 +1,82 @@
+-------------------------------------------------------
+Criando e configurando repositorio
+-------------------------------------------------------
+
+Em uma pasta qualquer crie um repertorio 
+
+git init  (de um ls –a, para ver a pasta /.git oculta no diretorio do repertorio) 
+
+git config --global user.email ‘email@email.com’
+
+git config --global  user.name ‘name’
+
+git config –list ( lista todas as configurações realizadas no git)
+
+git config --global init.defaultbranch main ( configuranda a branch inicial basica)  
+
+-------------------------------------------------------
+Para arquivos untrackeds e modificados 
+-------------------------------------------------------
+
+alexandre@alexandre $: git add * ( adiciona todos) or
+
+alexandre@alexandre $: git add . (adiciona todos tbm) or
+
+alexandre@alexandre $: git add nome_do_arquivo.txt
+
+-------------------------------------------------------
+Tornar um arquivo untracked
+-------------------------------------------------------
+
+git restore --staged nome_do_arquivo.txt (Obs: Pode ser dado um ‘git status’ para ver os status dos dados) 
+
+--------------------------------------------------------
+Commit (o commit é para preparação para o arquivo se levado para o repositorio remoto)
+--------------------------------------------------------
+
+git commit –m ‘foi dado um commit’
+
+-------------------------------------------------------
+Para se comunicar com o github
+--------------------------------------------------------
+
+primeiro crie um repertorio no git hub. Depois de criado, vai haver algumas instruções sobre o que fazer.
+
+git remote add origin <endereco https> (adicionando a origem do Sistema)
+
+git branch -M main ( renamed a branch para main)
+
+git push -u origin main or git push origin main
+
+(empurrando o arquivo para o repertorio dogit online,
+vai pedir senha e o usuario ou email) ( toda vem que
+vc modificar seu trabalho na pasta local, vc tem que dar
+add, depois commit e logo após dar um git push main para 
+upar no git) 
+
+git remote –v ( mostra o endereço do repositorio ao qual vc está acessando)
+
+----------------------------------------------------------
+Para clonar um projeto e puxa-lo de um repositório
+----------------------------------------------------------
+
+git clone url_do_projeto  ( o link é tirado  do github na internet) 
+
+-----------------------------------------------------------
+Conflito de versionamento e o comando pull
+------------------------------------------------------------
+
+Há casos que duas pessoas diferentes modificam a mesma linha de codigo,
+nesse caso quando vc dá um push, ocorrerá um problema na atualização.
+Assim é necessario fazer um pull
+
+git pull origin main
+
+Depois de vc ter realizado um PULL e ter corrigido os conflitos e resolvido
+os problemas temos que repetir os passos que estamos acostumandos 
+
+git add *
+
+git commit –m “  -----------“
+
+git push origin main 
