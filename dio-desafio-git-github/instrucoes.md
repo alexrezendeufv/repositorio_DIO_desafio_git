@@ -1,8 +1,8 @@
 Anteriomente para fazer o acesso entre a sua maquina e repositorio
 era necessário email e senha para finalizar essa comunicação.
- Com a Chave SSH não há mais a necessidade de fazer esse procedimento.
- Primeiro vc tem que ir no settings da sua conta no github e ir em chave SSH e GbG keys.
- Loga após isso vc tem ir na sua maquina e fazer o seguinte procedimento: 
+Com a Chave SSH não há mais a necessidade de fazer esse procedimento.
+Primeiro vc tem que ir no settings da sua conta no github e ir em chave SSH e GbG keys.
+Loga após isso vc tem ir na sua maquina e fazer o seguinte procedimento: 
 
 ssh-keygen -t ed25519 -C "email"
 Resultado:
